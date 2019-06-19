@@ -1,3 +1,6 @@
+# This is just a minimal repository for phoenix timeout issue
+# Issue
+If the API endpoint process the request for more than 60 seconds, phoenix server times out.
 # Demo
 
 To start your Phoenix server:
@@ -8,12 +11,9 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+# Solution
 
-## Learn more
+You can change http config in config.exs/dev.exs as below to set the timeout.
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+http: [port: 4001, protocol_options: [idle_timeout: 70_000]] or
+http: [port: 4001, protocol_options: [idle_timeout: :infinity]]
