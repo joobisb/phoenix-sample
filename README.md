@@ -15,5 +15,5 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 You can change http config in config.exs/dev.exs as below to set the timeout.
 
-```http: [port: 4001, protocol_options: [idle_timeout: 70_000]]``` 
+```http: [port: 4001, protocol_options: [idle_timeout: 70_000]]``` OR
 ```http: [port: 4001, protocol_options: [idle_timeout: :infinity]]```
