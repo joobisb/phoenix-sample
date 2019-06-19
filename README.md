@@ -1,4 +1,4 @@
-# This is just a minimal repository for phoenix timeout issue
+# Minimal repository for phoenix timeout issue
 # Issue
 If the API endpoint process the request for more than 60 seconds, phoenix server times out.
 # Demo
